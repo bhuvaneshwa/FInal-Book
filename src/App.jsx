@@ -7,8 +7,8 @@ import SecondNavbar from "./pages/SecondNavbar";
 // Lazy import your pages
 const LazyNavbar = React.lazy(() => import("./pages/Navbar"));
 
-const Topnavbar = React.lazy(() =>import ("./pages/TopNavbar"))
-const Secondnavbar = React.lazy(() =>import ("./pages/SecondNavbar"))
+const Topnavbar = React.lazy(() => import("./pages/TopNavbar"))
+const Secondnavbar = React.lazy(() => import("./pages/SecondNavbar"))
 // Loading component for Suspense fallback
 const LoadingAnimation = () => {
   return (
@@ -21,8 +21,8 @@ const LoadingAnimation = () => {
 export default function App() {
   return (
     <div>
-      <Topnavbar/>
-      <Secondnavbar/>
+      <Topnavbar />
+      <Secondnavbar />
       <Router>
         <Suspense fallback={<LoadingAnimation />}>
           <Routes>
@@ -31,7 +31,7 @@ export default function App() {
           </Routes>
         </Suspense>
       </Router>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
