@@ -4,21 +4,31 @@ export default function SecondNavbar() {
   return (
     <div className="bg-gray-50 dark:bg-gray-200 dark:text-gray-200">
       <div className="container mx-auto px-5 py-4 flex justify-between items-center">
-        <ul className="flex space-x-4 text-sm">
-          <li className="font-semibold text-gray-700 hover:text-[#606c38] hover:underline">
-            Track Order
+        <ul className="flex space-x-6 text-sm">
+          <li className="">
+            <a className="font-semibold text-gray-700 transition-colors duration-400 hover:text-blue-400">
+              Track Order
+            </a>
           </li>
-          <li className="font-semibold text-gray-700 hover:text-[#606c38] hover:underline">
-            About Us
+          <li>
+            <a className="font-semibold text-gray-700 transition-colors duration-400 hover:text-blue-400">
+              About Us
+            </a>
           </li>
-          <li className="font-semibold text-gray-700 hover:text-[#606c38] hover:underline">
-            Blog
+          <li>
+            <a className="font-semibold text-gray-700 transition-colors duration-400 hover:text-blue-400">
+              Blog
+            </a>
           </li>
-          <li className="font-semibold text-gray-700 hover:text-[#606c38] hover:underline">
-            Contact Us
+          <li>
+            <a className="font-semibold text-gray-700 transition-colors duration-400 hover:text-blue-400">
+              Contact Us
+            </a>
           </li>
-          <li className="font-semibold text-gray-700 hover:text-[#606c38] hover:underline">
-            FAQ
+          <li>
+            <a className="font-semibold text-gray-700 transition-colors duration-400 hover:text-blue-400">
+              FAQ
+            </a>
           </li>
         </ul>
       </div>
