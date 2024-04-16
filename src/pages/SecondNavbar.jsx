@@ -7,7 +7,7 @@ export default function SecondNavbar() {
         <ul className="flex space-x-6 text-sm">
           <li className="">
             <a className="font-semibold text-gray-700 transition-colors duration-400 hover:text-blue-400">
-              Track Order
+              Track Order 1
             </a>
           </li>
           <li>
