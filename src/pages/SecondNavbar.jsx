@@ -1,4 +1,5 @@
-
+import React from "react";
+import { Link } from "react-router-dom";
 
 export default function SecondNavbar() {
   return (
@@ -6,33 +7,48 @@ export default function SecondNavbar() {
       <div className="container mx-auto px-5 py-4 flex justify-between items-center">
         <ul className="flex space-x-6 text-sm">
           <li className="">
-            <a className="font-semibold text-gray-700 transition-colors duration-400 hover:text-blue-400">
+            <Link
+              to="/track"
+              className="font-semibold text-gray-700 transition-colors duration-400 hover:text-blue-400"
+            >
               Track Order 1
-            </a>
+            </Link>
           </li>
           <li>
-            <a className="font-semibold text-gray-700 transition-colors duration-400 hover:text-blue-400">
+            <Link
+              to="/about"
+              className="font-semibold text-gray-700 transition-colors duration-400 hover:text-blue-400"
+            >
               About Us
-            </a>
+            </Link>
           </li>
           <li>
-            <a className="font-semibold text-gray-700 transition-colors duration-400 hover:text-blue-400">
+            <Link
+              to="/blog"
+              className="font-semibold text-gray-700 transition-colors duration-400 hover:text-blue-400"
+            >
               Blog
-            </a>
+            </Link>
           </li>
           <li>
-            <a className="font-semibold text-gray-700 transition-colors duration-400 hover:text-blue-400">
+            <Link
+              to="/contact"
+              className="font-semibold text-gray-700 transition-colors duration-400 hover:text-blue-400"
+            >
               Contact Us
-            </a>
+            </Link>
           </li>
           <li>
-            <a className="font-semibold text-gray-700 transition-colors duration-400 hover:text-blue-400">
+            <Link
+              to="/faq"
+              className="font-semibold text-gray-700 transition-colors duration-400 hover:text-blue-400"
+            >
               FAQ
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
-      <hr className=' border-blue-400'></hr>
+      <hr className=" border-blue-400"></hr>
     </div>
-  )
+  );
 }

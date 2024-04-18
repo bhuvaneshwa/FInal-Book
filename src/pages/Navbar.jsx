@@ -1,9 +1,9 @@
 import { Link, Outlet } from "react-router-dom";
 import { useState } from "react";
-import { FaShoppingCart } from "react-icons/fa";
+// import { FaShoppingCart } from "react-icons/fa";
 
 export default function Navbar() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -12,7 +12,7 @@ export default function Navbar() {
 
   return (
     <div>
-         <header className="dark:bg-white dark:text-black">
+      <header className="dark:bg-white dark:text-black">
         <div className="container flex justify-between items-center h-16 mx-auto">
           <div className="flex items-center">
             <Link to="/" aria-label="Back to homepage" className="flex items-center p-2">
@@ -77,15 +77,15 @@ export default function Navbar() {
           <div className="items-center mx-2 gap-3 flex-shrink-0 hidden lg:flex">
             {/* Profile Button */}
             <Link to="/register/login">
-              <button className="bg-white border text-black px-4 py-2 rounded-sm">Login</button>
+              <button className="bg-white border text-black px-4 py-2 rounded-sm hover:bg-blue-400 hover:text-white">Login</button>
             </Link>
             <Link to="/register">
               <button className="bg-white border text-black px-4 py-2 rounded-sm">Sign up</button>
             </Link>
             {/* Shopping Cart Button */}
-            <button className="px-4 py-2 font-semibold rounded dark:bg-white dark:text-black">
+            {/* <button className="px-4 py-2 font-semibold rounded dark:bg-white dark:text-black">
               <FaShoppingCart className="w-6 h-6" />
-            </button>
+            </button> */}
           </div>
         </div>
       </header>
