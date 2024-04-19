@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./Footer";
-import General from "./pages/Books/General";
+
 
 // Lazy import your pages
 const LazyNavbar = React.lazy(() => import("./pages/Navbar"));

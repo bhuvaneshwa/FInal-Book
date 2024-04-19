@@ -36,9 +36,9 @@ export default function Footer() {
               </span>
             </a>
           </div>
-          <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 xl:grid-cols-4
+          <div className="grid xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-4 text-sm gap-x-3 gap-y-8 lg:w-2/3 xl:grid-cols-4
           
-          lg:grid-cols-3 md:grid-cols-3 md:pl-3752">
+          lg:grid-cols-3">
             <div className="space-y-3">
               <h3 className="tracking-wide uppercase font-bold dark:text-gray-900">
                 Policy Pages
