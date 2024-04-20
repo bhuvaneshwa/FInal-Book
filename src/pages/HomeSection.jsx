@@ -2,7 +2,7 @@ import General from "./Books/General";
 import Newbooks from "./Books/NewBooks";
 import Permium from "./Books/perminum";
 import Homehero from "./Homehero";
-import Membership from "./Membership";
+import { Membership } from "./Membership";
 import SecondBanner from "./SecondBanner";
 import Testimonial from "./Testimonial";
 
@@ -13,11 +13,11 @@ const HomeSection = () => {
 
       <SecondBanner />
 
-     
-        <General />
-        <Permium />
-        <Newbooks />
-    
+
+      <General />
+      <Permium />
+      <Newbooks />
+
 
       <Testimonial />
 

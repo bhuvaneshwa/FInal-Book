@@ -17,6 +17,7 @@ const LazyLogin = React.lazy(() => import("./Login"));
 const LazyGeneralbook = React.lazy(() => import("./pages/Books/General"));
 const LazyPremiumbook = React.lazy(() => import("./pages/Books/perminum"));
 const LazyNewumbook = React.lazy(() => import("./pages/Books/NewBooks"));
+const LazyMembership = React.lazy(() => import("./pages/Membership"));
 
 // Loading component for Suspense fallback
 const LoadingAnimation = () => {
@@ -45,6 +46,7 @@ export default function App() {
             <Route path="/newbookview" element={<LazyNewumbook />} />
             <Route path="/register" element={<LazyRegisterForm />} />
             <Route path="/register/login" element={<LazyLogin />} />
+            <Route path="/membership" element={<LazyMembership />} />
             {/* Add more routes here */}
           </Routes>
           <LazyHomeSection />
