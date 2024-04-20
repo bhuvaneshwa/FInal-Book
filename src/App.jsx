@@ -1,10 +1,9 @@
 import React, { Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./pages/Navbar";
 import Footer from "./Footer";
 
-
 // Lazy import your pages
-const LazyNavbar = React.lazy(() => import("./pages/Navbar"));
 const LazyTopNavbar = React.lazy(() => import("./pages/TopNavbar"));
 const LazySecondNavbar = React.lazy(() => import("./pages/SecondNavbar"));
 const LazyHomeSection = React.lazy(() => import("./pages/HomeSection"));
@@ -31,11 +30,15 @@ export default function App() {
   return (
     <div>
       <Router>
+        {/* Load the Navbar component outside Suspense */}
+      
         <Suspense fallback={<LoadingAnimation />}>
+          {/* Load other components inside Suspense */}
           <LazyTopNavbar />
           <LazySecondNavbar />
+          <Navbar />
           <Routes>
-            <Route path="/" element={<LazyNavbar />} />
+            <Route index element={<LazyHomeSection />} />
             <Route path="/about" element={<LazyAbout />} />
             <Route path="/contact" element={<LazyContact />} />
             <Route path="/track" element={<LazyTracking />} />
@@ -45,9 +48,7 @@ export default function App() {
             <Route path="/newbookview" element={<LazyNewumbook />} />
             <Route path="/register" element={<LazyRegisterForm />} />
             <Route path="/register/login" element={<LazyLogin />} />
-            {/* Add more routes here */}
           </Routes>
-          <LazyHomeSection />
         </Suspense>
       </Router>
       <Footer />
