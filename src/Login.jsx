@@ -46,7 +46,7 @@ export default function Login() {
           </div>
           <div className="flex justify-center">
 
-            <Link to="/register/login/dashboard">
+            <Link to="/dashboard">
             <button
               type="button"
               className="w-full px-8 py-3 font-semibold rounded-md bg-blue-500 text-white hover:bg-blue-600"

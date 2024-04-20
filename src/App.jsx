@@ -47,8 +47,14 @@ export default function App() {
             <Route path="/generalview" element={<LazyGeneralbook />} />
             <Route path="/premiumbooks" element={<LazyPremiumbook />} />
             <Route path="/newbookview" element={<LazyNewumbook />} />
+
+
+
             <Route path="/register" element={<LazyRegisterForm />} />
             <Route path="/register/login" element={<LazyLogin />} />
+
+
+           
           </Routes>
         </Suspense>
       </Router>
