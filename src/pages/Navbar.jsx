@@ -97,9 +97,22 @@ function Navbar() {
         >
           {(ref) => (
             <div ref={ref} id="mobile-menu" className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <Link to="/" aria-label="Back to homepage" className="flex items-center p-2">
-                <img src="/Logo-V9.svg" alt="" className="h-10 w-24 rounded-full" />
-              </Link>
+              <div className="flex items-center justify-between">
+                <Link to="/" aria-label="Back to homepage" className="flex items-center p-2">
+                  <img src="/Logo-V9.svg" alt="" className="h-10 w-24 rounded-full" />
+                </Link>
+                <button onClick={toggleMenu}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    className="w-6 h-6 dark:text-white"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+                  </svg>
+                </button>
+              </div>
               <div className="flex items-center space-x-6 lg:hidden">
                 <button onClick={toggleMenu}>
                   <svg
