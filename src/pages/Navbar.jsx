@@ -98,7 +98,7 @@ function Navbar() {
                 </svg>
               </button>
               {isBookOpen && (
-                <ul className="absolute top-full left-0 w-full bg-white shadow-md rounded-b-md">
+                <ul className="absolute top-full left-0 w-40 bg-white shadow-md rounded-b-md">
                   <li>
                     <Link to="/generalview" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">General Books</Link>
                   </li>

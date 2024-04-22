@@ -17,6 +17,8 @@ const LazyLogin = React.lazy(() => import("./Login"));
 const LazyGeneralbook = React.lazy(() => import("./pages/Books/General"));
 const LazyPremiumbook = React.lazy(() => import("./pages/Books/perminum"));
 const LazyNewumbook = React.lazy(() => import("./pages/Books/NewBooks"));
+const LazyFaq = React.lazy(() => import("./pages/Faq"));
+const LazyReviews = React.lazy(() => import("./pages/Testimonial"));
 const LazyMembership = React.lazy(() => import("./pages/Membership"));
 
 // Loading component for Suspense fallback
@@ -46,6 +48,8 @@ export default function App() {
             <Route path="/contact" element={<LazyContact />} />
             <Route path="/track" element={<LazyTracking />} />
             <Route path="/blog" element={<LazyBlog />} />
+            <Route path="/faq" element={<LazyFaq />} />
+            <Route path="/testimonial" element={<LazyReviews />} />
             <Route path="/generalview" element={<LazyGeneralbook />} />
             <Route path="/premiumbooks" element={<LazyPremiumbook />} />
             <Route path="/newbookview" element={<LazyNewumbook />} />
