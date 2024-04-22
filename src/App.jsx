@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./pages/Navbar";
 import Footer from "./Footer";
-import Nav from "./pages/nav";
+
 
 // Lazy import your pages
 const LazyTopNavbar = React.lazy(() => import("./pages/TopNavbar"));
@@ -38,8 +38,8 @@ export default function App() {
           {/* Load other components inside Suspense */}
           <LazyTopNavbar />
           <LazySecondNavbar />
-          <Nav />
-          {/* <Navbar /> */}
+          {/* <Nav /> */}
+          <Navbar />
           <Routes>
             <Route index element={<LazyHomeSection />} />
             <Route path="/about" element={<LazyAbout />} />
