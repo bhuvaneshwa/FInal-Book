@@ -1,6 +1,30 @@
-import { Link } from "react-router-dom";
+// Login.js
+import { useState } from "react";
+import { Redirect } from "react-router-dom";
 
-export default function Login() {
+function Login() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // State to track login status
+  const [role, setRole] = useState(""); // State to track user role
+
+  // Function to handle form submission (authentication)
+  const handleLogin = (selectedRole) => {
+    // Perform authentication logic here (e.g., validate credentials)
+
+    // For demonstration purposes, let's assume authentication is successful
+    setIsLoggedIn(true);
+    // Set user role based on the selectedRole parameter
+    setRole(selectedRole);
+  };
+
+  // If user is already logged in, redirect them to the appropriate dashboard
+  if (isLoggedIn) {
+    if (role === "admin") {
+      return <Redirect to="/dashboard/admin" />;
+    } else if (role === "user") {
+      return <Redirect to="/dashboard/user" />;
+    }
+  }
+
   return (
     <div className="flex justify-center items-center h-screen">
       <div className="w-full max-w-md p-6 rounded-md shadow-lg bg-white">
@@ -45,19 +69,27 @@ export default function Login() {
             </div>
           </div>
           <div className="flex justify-center">
-
-            <Link to="/dashboard">
             <button
               type="button"
+              onClick={() => handleLogin("admin")} // Call handleLogin function with "admin" role
               className="w-full px-8 py-3 font-semibold rounded-md bg-blue-500 text-white hover:bg-blue-600"
             >
-              Sign in
+              Sign in as Admin
             </button>
-            </Link>
-            
+          </div>
+          <div className="flex justify-center mt-4">
+            <button
+              type="button"
+              onClick={() => handleLogin("user")} // Call handleLogin function with "user" role
+              className="w-full px-8 py-3 font-semibold rounded-md bg-blue-500 text-white hover:bg-blue-600"
+            >
+              Sign in as User
+            </button>
           </div>
         </form>
       </div>
     </div>
   );
 }
+
+export default Login;

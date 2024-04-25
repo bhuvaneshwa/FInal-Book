@@ -4,6 +4,7 @@ import Navbar from "./pages/Navbar";
 import Footer from "./Footer";
 
 
+
 // Lazy import your pages
 const LazyTopNavbar = React.lazy(() => import("./pages/TopNavbar"));
 const LazySecondNavbar = React.lazy(() => import("./pages/SecondNavbar"));
@@ -18,6 +19,10 @@ const LazyGeneralbook = React.lazy(() => import("./pages/Books/General"));
 const LazyPremiumbook = React.lazy(() => import("./pages/Books/perminum"));
 const LazyNewumbook = React.lazy(() => import("./pages/Books/NewBooks"));
 const LazyMembership = React.lazy(() => import("./pages/Membership"));
+
+
+
+
 
 // Loading component for Suspense fallback
 const LoadingAnimation = () => {
@@ -55,7 +60,7 @@ export default function App() {
             <Route path="/register" element={<LazyRegisterForm />} />
             <Route path="/register/login" element={<LazyLogin />} />
 
-
+            
 
           </Routes>
         </Suspense>
