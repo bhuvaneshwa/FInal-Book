@@ -1,6 +1,25 @@
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleLogin = () => {
+    // Perform your authentication logic here
+    // For demonstration, let's assume the correct email and password are 'admin@example.com' and 'password'
+    const correctEmail = 'doodledream@gmail.com';
+    const correctPassword = 'doodle';
+
+    if (email === correctEmail && password === correctPassword) {
+      // If the email and password are correct, navigate to the admin dashboard
+      window.location.href = "/dashboard";
+    } else {
+      // Handle incorrect credentials
+      alert("Incorrect email or password");
+    }
+  };
+
   return (
     <div className="flex justify-center items-center h-screen">
       <div className="w-full max-w-md p-6 rounded-md shadow-lg bg-white">
@@ -8,7 +27,7 @@ export default function Login() {
           <h1 className="my-3 text-4xl font-bold">Sign in</h1>
           <p className="text-sm text-gray-600">Sign in to access your account</p>
         </div>
-        <form noValidate="" action="" className="space-y-6">
+        <form noValidate="" className="space-y-6 mb-3">
           <div className="space-y-4">
             <div>
               <label htmlFor="email" className="block mb-2 text-sm">
@@ -20,6 +39,8 @@ export default function Login() {
                 id="email"
                 placeholder="leroy@jenkins.com"
                 className="w-full px-3 py-2 border rounded-md"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div>
@@ -41,22 +62,27 @@ export default function Login() {
                 id="password"
                 placeholder="*****"
                 className="w-full px-3 py-2 border rounded-md"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
             </div>
           </div>
           <div className="flex justify-center">
-
-            <Link to="/dashboard">
             <button
               type="button"
               className="w-full px-8 py-3 font-semibold rounded-md bg-blue-500 text-white hover:bg-blue-600"
+              onClick={handleLogin}
             >
               Sign in
             </button>
-            </Link>
-            
           </div>
         </form>
+        <p className="text-sm text-gray-600">
+          Already not have an account{" "}
+          <Link to="/register">
+            <span className="text-blue-400 hover:underline"> Register Now</span>
+          </Link>
+        </p>
       </div>
     </div>
   );
