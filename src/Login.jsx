@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Redirect } from "react-router-dom";
 
+
 function Login() {
   const [isLoggedIn, setIsLoggedIn] = useState(false); // State to track login status
   const [role, setRole] = useState(""); // State to track user role
@@ -32,7 +33,7 @@ function Login() {
           <h1 className="my-3 text-4xl font-bold">Sign in</h1>
           <p className="text-sm text-gray-600">Sign in to access your account</p>
         </div>
-        <form noValidate="" action="" className="space-y-6">
+        <form noValidate="" className="space-y-6 mb-3">
           <div className="space-y-4">
             <div>
               <label htmlFor="email" className="block mb-2 text-sm">
@@ -44,6 +45,8 @@ function Login() {
                 id="email"
                 placeholder="leroy@jenkins.com"
                 className="w-full px-3 py-2 border rounded-md"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div>
@@ -65,6 +68,8 @@ function Login() {
                 id="password"
                 placeholder="*****"
                 className="w-full px-3 py-2 border rounded-md"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
             </div>
           </div>
@@ -73,6 +78,7 @@ function Login() {
               type="button"
               onClick={() => handleLogin("admin")} // Call handleLogin function with "admin" role
               className="w-full px-8 py-3 font-semibold rounded-md bg-blue-500 text-white hover:bg-blue-600"
+              onClick={handleLogin}
             >
               Sign in as Admin
             </button>
@@ -87,6 +93,12 @@ function Login() {
             </button>
           </div>
         </form>
+        <p className="text-sm text-gray-600">
+          Already not have an account{" "}
+          <Link to="/register">
+            <span className="text-blue-400 hover:underline"> Register Now</span>
+          </Link>
+        </p>
       </div>
     </div>
   );

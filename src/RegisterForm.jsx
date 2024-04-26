@@ -37,42 +37,42 @@ function RegisterForm() {
     let errors = {};
     const nameRegex = /^[A-Za-z\s'-]+$/; // Regular expression for alphabetic characters, spaces, hyphens, and apostrophes
     const phoneRegex = /^\d{10}$/; // Regular expression for exactly 10 digits
-  
+
     if (!data.name.trim()) {
       errors.name = "Name is required";
     } else if (!nameRegex.test(data.name)) {
       errors.name = "Invalid name format";
     }
-  
+
     if (!data.email.trim()) {
       errors.email = "Email is required";
     } else if (!/\S+@\S+\.\S+/.test(data.email)) {
       errors.email = "Email is invalid";
     }
-  
+
     if (!data.password.trim()) {
       errors.password = "Password is required";
     }
-  
+
     if (!data.confirmPassword.trim()) {
       errors.confirmPassword = "Confirm password is required";
     } else if (data.confirmPassword !== data.password) {
       errors.confirmPassword = "Passwords do not match";
     }
-  
+
     if (!data.phoneNumber.trim()) {
       errors.phoneNumber = "Phone number is required";
     } else if (!phoneRegex.test(data.phoneNumber)) {
       errors.phoneNumber = "Phone number must contain exactly 10 digits";
     }
-  
+
     if (!data.termsAccepted) {
       errors.termsAccepted = "You must accept the terms and conditions";
     }
-  
+
     return errors;
   };
-  
+
   return (
     <section className="bg-gray-50">
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
@@ -133,7 +133,7 @@ function RegisterForm() {
             </form>
             {/* Login link */}
             <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-              Already have an account? <Link to="/Login" className="font-medium text-primary-600 hover:underline dark:text-primary-500">Login here</Link>
+              Already have an account? <Link to="/register/login" className="font-medium text-primary-600 hover:underline dark:text-primary-500 text-blue-400">Login here</Link>
             </p>
           </div>
         </div>

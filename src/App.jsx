@@ -18,7 +18,11 @@ const LazyLogin = React.lazy(() => import("./Login"));
 const LazyGeneralbook = React.lazy(() => import("./pages/Books/General"));
 const LazyPremiumbook = React.lazy(() => import("./pages/Books/perminum"));
 const LazyNewumbook = React.lazy(() => import("./pages/Books/NewBooks"));
+const LazyFaq = React.lazy(() => import("./pages/Faq"));
+const LazyReviews = React.lazy(() => import("./pages/Testimonial"));
 const LazyMembership = React.lazy(() => import("./pages/Membership"));
+const LazyAdmin = React.lazy(() => import("./pages/Dashboard/Admin"));
+const LazyAddproduct = React.lazy(() => import("./pages/Dashboard/admindashboard/Addproduct"));
 
 
 
@@ -51,17 +55,21 @@ export default function App() {
             <Route path="/contact" element={<LazyContact />} />
             <Route path="/track" element={<LazyTracking />} />
             <Route path="/blog" element={<LazyBlog />} />
+            <Route path="/faq" element={<LazyFaq />} />
+            <Route path="/testimonial" element={<LazyReviews />} />
             <Route path="/generalview" element={<LazyGeneralbook />} />
             <Route path="/premiumbooks" element={<LazyPremiumbook />} />
             <Route path="/newbookview" element={<LazyNewumbook />} />
 
             <Route path="/membership" element={<LazyMembership />} />
+            <Route path="/dashboard" element={<LazyAdmin />} />
 
             <Route path="/register" element={<LazyRegisterForm />} />
             <Route path="/register/login" element={<LazyLogin />} />
 
             
 
+            <Route path="/dashboard/addproducts" element={<LazyAddproduct />} />
           </Routes>
         </Suspense>
       </Router>
