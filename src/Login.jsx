@@ -7,13 +7,18 @@ export default function Login() {
 
   const handleLogin = () => {
     // Perform your authentication logic here
-    // For demonstration, let's assume the correct email and password are 'admin@example.com' and 'password'
-    const correctEmail = 'doodledream@gmail.com';
-    const correctPassword = 'doodle';
+    // For demonstration, let's assume the correct email and password for admin and user
+    const adminCredentials = { email: 'doodledream@gmail.com', password: 'doodle' };
+    const userCredentials = { email: 'user@example.com', password: 'userpassword' };
 
-    if (email === correctEmail && password === correctPassword) {
-      // If the email and password are correct, navigate to the admin dashboard
-      window.location.href = "/dashboard";
+    if ((email === adminCredentials.email && password === adminCredentials.password) ||
+      (email === userCredentials.email && password === userCredentials.password)) {
+      // If the email and password are correct, navigate to the respective dashboard
+      if (email === adminCredentials.email) {
+        window.location.href = "/admin/dashboard"; // Navigate to admin dashboard
+      } else {
+        window.location.href = "/user/dashboard"; // Navigate to user dashboard
+      }
     } else {
       // Handle incorrect credentials
       alert("Incorrect email or password");
@@ -78,9 +83,9 @@ export default function Login() {
           </div>
         </form>
         <p className="text-sm text-gray-600">
-          Already not have an account{" "}
+          Don't have an account yet?{" "}
           <Link to="/register">
-            <span className="text-blue-400 hover:underline"> Register Now</span>
+            <span className="text-blue-400 hover:underline">Register Now</span>
           </Link>
         </p>
       </div>
