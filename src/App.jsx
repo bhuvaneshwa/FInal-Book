@@ -21,9 +21,11 @@ const LazyFaq = React.lazy(() => import("./pages/Faq"));
 const LazyReviews = React.lazy(() => import("./pages/Testimonial"));
 const LazyMembership = React.lazy(() => import("./pages/Membership"));
 const LazyAdmin = React.lazy(() => import("./pages/Dashboard/Admin"));
-const LazyUser = React.lazy(() => import("./pages/Dashboard/User"));
+const LazyUser = React.lazy(() => import("./pages/Dashboard/userdashboard/User"));
 const LazyAddproduct = React.lazy(() => import("./pages/Dashboard/admindashboard/Addproduct"));
 const LazyHome = React.lazy(() => import("./pages/Dashboard/admindashboard/Home"));
+const Lazyproduct = React.lazy(() => import("./pages/Dashboard/admindashboard/Product"));
+const Lazycustomer = React.lazy(() => import("./pages/Dashboard/admindashboard/User"));
 
 // Loading component for Suspense fallback
 const LoadingAnimation = () => {
@@ -69,6 +71,8 @@ export default function App() {
 
             <Route path="/dashboard/addproducts" element={<LazyAddproduct />} />
             <Route path="/dashboard/home" element={<LazyHome />} />
+            <Route path="/dashboard/products" element={<Lazyproduct />} />
+            <Route path="/dashboard/user" element={<Lazycustomer />} />
           </Routes>
         </Suspense>
       </Router>
