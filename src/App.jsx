@@ -4,7 +4,6 @@ import Navbar from "./pages/Navbar";
 import Footer from "./Footer";
 
 
-
 // Lazy import your pages
 const LazyTopNavbar = React.lazy(() => import("./pages/TopNavbar"));
 const LazySecondNavbar = React.lazy(() => import("./pages/SecondNavbar"));
@@ -22,11 +21,9 @@ const LazyFaq = React.lazy(() => import("./pages/Faq"));
 const LazyReviews = React.lazy(() => import("./pages/Testimonial"));
 const LazyMembership = React.lazy(() => import("./pages/Membership"));
 const LazyAdmin = React.lazy(() => import("./pages/Dashboard/Admin"));
+const LazyUser = React.lazy(() => import("./pages/Dashboard/User"));
 const LazyAddproduct = React.lazy(() => import("./pages/Dashboard/admindashboard/Addproduct"));
-
-
-
-
+const LazyHome = React.lazy(() => import("./pages/Dashboard/admindashboard/Home"));
 
 // Loading component for Suspense fallback
 const LoadingAnimation = () => {
@@ -62,14 +59,16 @@ export default function App() {
             <Route path="/newbookview" element={<LazyNewumbook />} />
 
             <Route path="/membership" element={<LazyMembership />} />
-            <Route path="/dashboard" element={<LazyAdmin />} />
+            <Route path="/admin/dashboard" element={<LazyAdmin />} />
+            <Route path="/user/dashboard" element={<LazyUser />} />
 
             <Route path="/register" element={<LazyRegisterForm />} />
             <Route path="/register/login" element={<LazyLogin />} />
 
-            
+
 
             <Route path="/dashboard/addproducts" element={<LazyAddproduct />} />
+            <Route path="/dashboard/home" element={<LazyHome />} />
           </Routes>
         </Suspense>
       </Router>

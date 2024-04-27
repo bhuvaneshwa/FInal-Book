@@ -1,30 +1,29 @@
-// Login.js
-import { useState } from "react";
-import { Redirect } from "react-router-dom";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
+export default function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-function Login() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // State to track login status
-  const [role, setRole] = useState(""); // State to track user role
+  const handleLogin = () => {
+    // Perform your authentication logic here
+    // For demonstration, let's assume the correct email and password for admin and user
+    const adminCredentials = { email: 'doodledream@gmail.com', password: 'doodle' };
+    const userCredentials = { email: 'user@example.com', password: 'userpassword' };
 
-  // Function to handle form submission (authentication)
-  const handleLogin = (selectedRole) => {
-    // Perform authentication logic here (e.g., validate credentials)
-
-    // For demonstration purposes, let's assume authentication is successful
-    setIsLoggedIn(true);
-    // Set user role based on the selectedRole parameter
-    setRole(selectedRole);
-  };
-
-  // If user is already logged in, redirect them to the appropriate dashboard
-  if (isLoggedIn) {
-    if (role === "admin") {
-      return <Redirect to="/dashboard/admin" />;
-    } else if (role === "user") {
-      return <Redirect to="/dashboard/user" />;
+    if ((email === adminCredentials.email && password === adminCredentials.password) ||
+      (email === userCredentials.email && password === userCredentials.password)) {
+      // If the email and password are correct, navigate to the respective dashboard
+      if (email === adminCredentials.email) {
+        window.location.href = "/admin/dashboard"; // Navigate to admin dashboard
+      } else {
+        window.location.href = "/user/dashboard"; // Navigate to user dashboard
+      }
+    } else {
+      // Handle incorrect credentials
+      alert("Incorrect email or password");
     }
-  }
+  };
 
   return (
     <div className="flex justify-center items-center h-screen">
@@ -76,32 +75,20 @@ function Login() {
           <div className="flex justify-center">
             <button
               type="button"
-              onClick={() => handleLogin("admin")} // Call handleLogin function with "admin" role
               className="w-full px-8 py-3 font-semibold rounded-md bg-blue-500 text-white hover:bg-blue-600"
               onClick={handleLogin}
             >
-              Sign in as Admin
-            </button>
-          </div>
-          <div className="flex justify-center mt-4">
-            <button
-              type="button"
-              onClick={() => handleLogin("user")} // Call handleLogin function with "user" role
-              className="w-full px-8 py-3 font-semibold rounded-md bg-blue-500 text-white hover:bg-blue-600"
-            >
-              Sign in as User
+              Sign in
             </button>
           </div>
         </form>
         <p className="text-sm text-gray-600">
-          Already not have an account{" "}
+          Don't have an account yet?{" "}
           <Link to="/register">
-            <span className="text-blue-400 hover:underline"> Register Now</span>
+            <span className="text-blue-400 hover:underline">Register Now</span>
           </Link>
         </p>
       </div>
     </div>
   );
 }
-
-export default Login;

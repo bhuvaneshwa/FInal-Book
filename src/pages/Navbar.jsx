@@ -14,7 +14,7 @@ function Navbar() {
   };
 
   return (
-    <header className="bg-blue-950 dark:text-white relative z-20">
+    <header className="bg-blue-950 dark:text-white relative z-40 px-1">
       <div className="container flex justify-between items-center xs:p-2 xs:px-2 p-1 mx-auto relative">
         <div className="flex-grow text-left">
           <Link to="/" aria-label="Back to homepage">
