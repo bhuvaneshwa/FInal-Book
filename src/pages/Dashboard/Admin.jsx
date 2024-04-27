@@ -22,6 +22,9 @@ export default function Admin() {
               <Link to="/dashboard/home" className="block text-gray-300 hover:text-white">Sales</Link>
             </li>
             <li className="mb-2">
+              <Link to="/dashboard/user" className="block text-gray-300 hover:text-white">User</Link>
+            </li>
+            <li className="mb-2">
               <Link to="/dashboard/products" className="block text-gray-300 hover:text-white">Products</Link>
             </li>
             <li className="mb-2">

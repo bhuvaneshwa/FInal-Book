@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import statisticscards from './statisticscards';
-import Homec from './Homec'
-export default function Home() {
+import Usercontent from './Usercontent';
+
+export default function User() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(true); // Set sidebar to be always visible initially
     const location = useLocation();
 
@@ -52,10 +53,9 @@ export default function Home() {
 
                 {/* Main content area */}
                 <div className="flex-1 p-4 overflow-y-auto">
-                    <Homec></Homec>
+                    <Usercontent />
                 </div>
             </div>
         </div>
     );
 }
-
