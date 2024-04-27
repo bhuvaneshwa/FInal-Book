@@ -2,141 +2,325 @@ import { Link } from 'react-router-dom';
 
 export default function permium() {
     return (
-        <div className="mt-14   xl:mx-10 lg:mx-10  xs:mx-5 mb-12">
-            <div className="flex flex-row justify-between">
-                <h1 className="text-3xl font-bold aos-init aos-animate mt-10">Permium books</h1>
-                <Link to="/premium-books"> <button className="text-center mt-10 cursor-pointer  bg-primary text-white py-1 px-5 rounded-md">
-                    View All Books
-                </button></Link>
+      <div>
+         <div className="mt-6 mb-14 xl:mx-10 lg:mx-10   xs:mx-5">
+      <div className="flex flex-row justify-between">
+        <h1 className="text-3xl font-bold aos-init aos-animate mt-4 mx-4">
+         PREMINUM BOOKS
+        </h1>
+        <Link to="/premiumbooks">
+          {" "}
+          <button className="text-center mt-4 mx-4 cursor-pointer  text-white bg-blue-950 py-1 px-5 rounded-md">
+            View All Books
+          </button>
+        </Link>
+      </div>
+      <div className="container ">
+        <div className="grid mb-5 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 place-items-center gap-5 ">
+          <div className="mt-4 mb-4 w-80 transform overflow-hidden rounded-lg bg-white dark:bg-slate-200 shadow-md duration-300 hover:scale-105 hover:shadow-lg">
+            <img
+              className="h-48 w-full object-cover object-center"
+              src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1663778488-51vYL46dfL._SL500_.jpg?crop=1xw:1xh;center,top&resize=980:*"
+              alt="Book Cover"
+            />
+            <div className="p-4">
+              <h2 className="mb-2 text-lg font-medium dark:text-black text-gray-900">
+                Book Title
+              </h2>
+              <p className="mb-1 text-base dark:text-black text-gray-700">
+                By <span className="font-semibold">Author Name</span>
+              </p>
+              <p className="mb-2 text-sm dark:text-black text-gray-600">
+                Published Date:{" "}
+                <span className="font-semibold">January 1, 2022</span>
+              </p>
+              <p className="mb-2 text-sm dark:text-black text-gray-600">
+                Genre: <span className="font-semibold">Fiction</span>
+              </p>
+              <div className="flex items-center mb-2">
+                <p className="mr-2 text-lg font-semibold text-black ">
+                  $20.00
+                </p>
+                <p className="text-base font-medium text-gray-500 line-through dark:text-gray-300">
+                  $25.00
+                </p>
+                <p className="ml-auto text-base font-medium text-green-500">
+                  20% off
+                </p>
+              </div>
+              <button className="bg-blue-950 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                Add to Cart
+              </button>
             </div>
-            <div className="container mt-10">
-                <div className="grid xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 place-items-center gap-5">
+          </div>
 
-
-                    <div data-aos="fade-up" data-aos-delay="0" className="space-y-3 aos-init aos-animate ">
-                        <img src="https://www.dymocks.com.au/Pages/ImageHandler.ashx?q=9780356516851&w=&h=250" alt="" className="h-[220px] w-[150px] object-cover rounded-md" />
-                        <div>
-                            <h3 className="font-semibold">The Adventures of Amina Al-Sirafi, by Shannon Chakraborty</h3>
-                            <p className="text-sm text-gray-600 mb-5">₹500</p>
-                            {/* <div className="flex items-center gap-1">
-                <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 576 512" className="text-yellow-400" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
-                </svg>
-                <span className="my-2">5</span>
-              </div> */}
-
-                        </div>
-                        <a href="#" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 mt-28 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Buy Now</a>
-                    </div>
-
-
-                    {/* Repeat the above block for each product */}
-
-                    <div data-aos="fade-up" data-aos-delay="0" className="space-y-3 aos-init aos-animate ">
-                        <img src="https://www.dymocks.com.au/Pages/ImageHandler.ashx?q=9780356516851&w=&h=250" alt="" className="h-[220px] w-[150px] object-cover rounded-md" />
-                        <div>
-                            <h3 className="font-semibold">The Adventures of Amina Al-Sirafi, by Shannon Chakraborty</h3>
-                            <p className="text-sm text-gray-600 mb-5">₹500</p>
-                            {/* <div className="flex items-center gap-1">
-                <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 576 512" className="text-yellow-400" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
-                </svg>
-                <span className="my-2">5</span>
-              </div> */}
-
-                        </div>
-                        <a href="#" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 mt-28 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Buy Now</a>
-                    </div>
-
-
-                    <div data-aos="fade-up" data-aos-delay="0" className="space-y-3 aos-init aos-animate ">
-                        <img src="https://www.dymocks.com.au/Pages/ImageHandler.ashx?q=9780356516851&w=&h=250" alt="" className="h-[220px] w-[150px] object-cover rounded-md" />
-                        <div>
-                            <h3 className="font-semibold">The Adventures of Amina Al-Sirafi, by Shannon Chakraborty</h3>
-                            <p className="text-sm text-gray-600 mb-5">₹500</p>
-                            {/* <div className="flex items-center gap-1">
-                <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 576 512" className="text-yellow-400" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
-                </svg>
-                <span className="my-2">5</span>
-              </div> */}
-
-                        </div>
-                        <a href="#" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 mt-28 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Buy Now</a>
-                    </div>
-
-
-
-                    <div data-aos="fade-up" data-aos-delay="0" className="space-y-3 aos-init aos-animate ">
-                        <img src="https://www.dymocks.com.au/Pages/ImageHandler.ashx?q=9780356516851&w=&h=250" alt="" className="h-[220px] w-[150px] object-cover rounded-md" />
-                        <div>
-                            <h3 className="font-semibold">The Adventures of Amina Al-Sirafi, by Shannon Chakraborty</h3>
-                            <p className="text-sm text-gray-600 mb-5">₹500</p>
-                            {/* <div className="flex items-center gap-1">
-                <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 576 512" className="text-yellow-400" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
-                </svg>
-                <span className="my-2">5</span>
-              </div> */}
-
-                        </div>
-                        <a href="#" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 mt-28 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Buy Now</a>
-                    </div>
-
-
-                    <div data-aos="fade-up" data-aos-delay="0" className="space-y-3 aos-init aos-animate ">
-                        <img src="https://www.dymocks.com.au/Pages/ImageHandler.ashx?q=9780356516851&w=&h=250" alt="" className="h-[220px] w-[150px] object-cover rounded-md" />
-                        <div>
-                            <h3 className="font-semibold">The Adventures of Amina Al-Sirafi, by Shannon Chakraborty</h3>
-                            <p className="text-sm text-gray-600 mb-5">₹500</p>
-                           
-
-                        </div>
-                        <a href="#" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 mt-28 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Buy Now</a>
-                    </div>
-
-
-                    <div data-aos="fade-up" data-aos-delay="0" className="space-y-3 aos-init aos-animate ">
-                        <img src="https://www.dymocks.com.au/Pages/ImageHandler.ashx?q=9780356516851&w=&h=250" alt="" className="h-[220px] w-[150px] object-cover rounded-md" />
-                        <div>
-                            <h3 className="font-semibold">The Adventures of Amina Al-Sirafi, by Shannon Chakraborty</h3>
-                            <p className="text-sm text-gray-600 mb-5">₹500</p>
-                           
-
-                        </div>
-                        <a href="#" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 mt-28 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Buy Now</a>
-                    </div>
-
-
-
-                    <div data-aos="fade-up" data-aos-delay="0" className="space-y-3 aos-init aos-animate ">
-                        <img src="https://www.dymocks.com.au/Pages/ImageHandler.ashx?q=9780356516851&w=&h=250" alt="" className="h-[220px] w-[150px] object-cover rounded-md" />
-                        <div>
-                            <h3 className="font-semibold">The Adventures of Amina Al-Sirafi, by Shannon Chakraborty</h3>
-                            <p className="text-sm text-gray-600 mb-5">₹500</p>
-                           
-
-                        </div>
-                        <a href="#" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 mt-28 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Buy Now</a>
-                    </div>
-
-
-                    <div data-aos="fade-up" data-aos-delay="0" className="space-y-3 aos-init aos-animate ">
-                        <img src="https://www.dymocks.com.au/Pages/ImageHandler.ashx?q=9780356516851&w=&h=250" alt="" className="h-[220px] w-[150px] object-cover rounded-md" />
-                        <div>
-                            <h3 className="font-semibold">The Adventures of Amina Al-Sirafi, by Shannon Chakraborty</h3>
-                            <p className="text-sm text-gray-600 mb-5">₹500</p>
-                           
-
-                        </div>
-                        <a href="#" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 mt-28 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Buy Now</a>
-                    </div>
-
-
-                </div>
-
-
+          <div className="mt-4 mb-4 w-80 transform overflow-hidden rounded-lg bg-white dark:bg-slate-200 shadow-md duration-300 hover:scale-105 hover:shadow-lg">
+            <img
+              className="h-48 w-full object-cover object-center"
+              src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1663778488-51vYL46dfL._SL500_.jpg?crop=1xw:1xh;center,top&resize=980:*"
+              alt="Book Cover"
+            />
+            <div className="p-4">
+              <h2 className="mb-2 text-lg font-medium dark:text-black text-gray-900">
+                Book Title
+              </h2>
+              <p className="mb-1 text-base dark:text-black text-gray-700">
+                By <span className="font-semibold">Author Name</span>
+              </p>
+              <p className="mb-2 text-sm dark:text-black text-gray-600">
+                Published Date:{" "}
+                <span className="font-semibold">January 1, 2022</span>
+              </p>
+              <p className="mb-2 text-sm dark:text-black text-gray-600">
+                Genre: <span className="font-semibold">Fiction</span>
+              </p>
+              <div className="flex items-center mb-2">
+                <p className="mr-2 text-lg font-semibold text-black ">
+                  $20.00
+                </p>
+                <p className="text-base font-medium text-gray-500 line-through dark:text-gray-300">
+                  $25.00
+                </p>
+                <p className="ml-auto text-base font-medium text-green-500">
+                  20% off
+                </p>
+              </div>
+              <button className="bg-blue-950 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                Add to Cart
+              </button>
             </div>
+          </div>
+
+
+          <div className="mt-4 mb-4 w-80 transform overflow-hidden rounded-lg bg-white dark:bg-slate-200 shadow-md duration-300 hover:scale-105 hover:shadow-lg">
+            <img
+              className="h-48 w-full object-cover object-center"
+              src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1663778488-51vYL46dfL._SL500_.jpg?crop=1xw:1xh;center,top&resize=980:*"
+              alt="Book Cover"
+            />
+            <div className="p-4">
+              <h2 className="mb-2 text-lg font-medium dark:text-black text-gray-900">
+                Book Title
+              </h2>
+              <p className="mb-1 text-base dark:text-black text-gray-700">
+                By <span className="font-semibold">Author Name</span>
+              </p>
+              <p className="mb-2 text-sm dark:text-black text-gray-600">
+                Published Date:{" "}
+                <span className="font-semibold">January 1, 2022</span>
+              </p>
+              <p className="mb-2 text-sm dark:text-black text-gray-600">
+                Genre: <span className="font-semibold">Fiction</span>
+              </p>
+              <div className="flex items-center mb-2">
+                <p className="mr-2 text-lg font-semibold text-black ">
+                  $20.00
+                </p>
+                <p className="text-base font-medium text-gray-500 line-through dark:text-gray-300">
+                  $25.00
+                </p>
+                <p className="ml-auto text-base font-medium text-green-500">
+                  20% off
+                </p>
+              </div>
+              <button className="bg-blue-950 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+
+          <div className="mt-4 mb-4 w-80 transform overflow-hidden rounded-lg bg-white dark:bg-slate-200 shadow-md duration-300 hover:scale-105 hover:shadow-lg">
+            <img
+              className="h-48 w-full object-cover object-center"
+              src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1663778488-51vYL46dfL._SL500_.jpg?crop=1xw:1xh;center,top&resize=980:*"
+              alt="Book Cover"
+            />
+            <div className="p-4">
+              <h2 className="mb-2 text-lg font-medium dark:text-black text-gray-900">
+                Book Title
+              </h2>
+              <p className="mb-1 text-base dark:text-black text-gray-700">
+                By <span className="font-semibold">Author Name</span>
+              </p>
+              <p className="mb-2 text-sm dark:text-black text-gray-600">
+                Published Date:{" "}
+                <span className="font-semibold">January 1, 2022</span>
+              </p>
+              <p className="mb-2 text-sm dark:text-black text-gray-600">
+                Genre: <span className="font-semibold">Fiction</span>
+              </p>
+              <div className="flex items-center mb-2">
+                <p className="mr-2 text-lg font-semibold text-black ">
+                  $20.00
+                </p>
+                <p className="text-base font-medium text-gray-500 line-through dark:text-gray-300">
+                  $25.00
+                </p>
+                <p className="ml-auto text-base font-medium text-green-500">
+                  20% off
+                </p>
+              </div>
+              <button className="bg-blue-950 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+
+          <div className="mt-4 mb-4 w-80 transform overflow-hidden rounded-lg bg-white dark:bg-slate-200 shadow-md duration-300 hover:scale-105 hover:shadow-lg">
+            <img
+              className="h-48 w-full object-cover object-center"
+              src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1663778488-51vYL46dfL._SL500_.jpg?crop=1xw:1xh;center,top&resize=980:*"
+              alt="Book Cover"
+            />
+            <div className="p-4">
+              <h2 className="mb-2 text-lg font-medium dark:text-black text-gray-900">
+                Book Title
+              </h2>
+              <p className="mb-1 text-base dark:text-black text-gray-700">
+                By <span className="font-semibold">Author Name</span>
+              </p>
+              <p className="mb-2 text-sm dark:text-black text-gray-600">
+                Published Date:{" "}
+                <span className="font-semibold">January 1, 2022</span>
+              </p>
+              <p className="mb-2 text-sm dark:text-black text-gray-600">
+                Genre: <span className="font-semibold">Fiction</span>
+              </p>
+              <div className="flex items-center mb-2">
+                <p className="mr-2 text-lg font-semibold text-black ">
+                  $20.00
+                </p>
+                <p className="text-base font-medium text-gray-500 line-through dark:text-gray-300">
+                  $25.00
+                </p>
+                <p className="ml-auto text-base font-medium text-green-500">
+                  20% off
+                </p>
+              </div>
+              <button className="bg-blue-950 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+
+          <div className="mt-4 mb-4 w-80 transform overflow-hidden rounded-lg bg-white dark:bg-slate-200 shadow-md duration-300 hover:scale-105 hover:shadow-lg">
+            <img
+              className="h-48 w-full object-cover object-center"
+              src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1663778488-51vYL46dfL._SL500_.jpg?crop=1xw:1xh;center,top&resize=980:*"
+              alt="Book Cover"
+            />
+            <div className="p-4">
+              <h2 className="mb-2 text-lg font-medium dark:text-black text-gray-900">
+                Book Title
+              </h2>
+              <p className="mb-1 text-base dark:text-black text-gray-700">
+                By <span className="font-semibold">Author Name</span>
+              </p>
+              <p className="mb-2 text-sm dark:text-black text-gray-600">
+                Published Date:{" "}
+                <span className="font-semibold">January 1, 2022</span>
+              </p>
+              <p className="mb-2 text-sm dark:text-black text-gray-600">
+                Genre: <span className="font-semibold">Fiction</span>
+              </p>
+              <div className="flex items-center mb-2">
+                <p className="mr-2 text-lg font-semibold text-black ">
+                  $20.00
+                </p>
+                <p className="text-base font-medium text-gray-500 line-through dark:text-gray-300">
+                  $25.00
+                </p>
+                <p className="ml-auto text-base font-medium text-green-500">
+                  20% off
+                </p>
+              </div>
+              <button className="bg-blue-950 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+
+          <div className="mt-4 mb-4 w-80 transform overflow-hidden rounded-lg bg-white dark:bg-slate-200 shadow-md duration-300 hover:scale-105 hover:shadow-lg">
+            <img
+              className="h-48 w-full object-cover object-center"
+              src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1663778488-51vYL46dfL._SL500_.jpg?crop=1xw:1xh;center,top&resize=980:*"
+              alt="Book Cover"
+            />
+            <div className="p-4">
+              <h2 className="mb-2 text-lg font-medium dark:text-black text-gray-900">
+                Book Title
+              </h2>
+              <p className="mb-1 text-base dark:text-black text-gray-700">
+                By <span className="font-semibold">Author Name</span>
+              </p>
+              <p className="mb-2 text-sm dark:text-black text-gray-600">
+                Published Date:{" "}
+                <span className="font-semibold">January 1, 2022</span>
+              </p>
+              <p className="mb-2 text-sm dark:text-black text-gray-600">
+                Genre: <span className="font-semibold">Fiction</span>
+              </p>
+              <div className="flex items-center mb-2">
+                <p className="mr-2 text-lg font-semibold text-black ">
+                  $20.00
+                </p>
+                <p className="text-base font-medium text-gray-500 line-through dark:text-gray-300">
+                  $25.00
+                </p>
+                <p className="ml-auto text-base font-medium text-green-500">
+                  20% off
+                </p>
+              </div>
+              <button className="bg-blue-950 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+
+          <div className="mt-4 mb-4 w-80 transform overflow-hidden rounded-lg bg-white dark:bg-slate-200 shadow-md duration-300 hover:scale-105 hover:shadow-lg">
+            <img
+              className="h-48 w-full object-cover object-center"
+              src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1663778488-51vYL46dfL._SL500_.jpg?crop=1xw:1xh;center,top&resize=980:*"
+              alt="Book Cover"
+            />
+            <div className="p-4">
+              <h2 className="mb-2 text-lg font-medium dark:text-black text-gray-900">
+                Book Title
+              </h2>
+              <p className="mb-1 text-base dark:text-black text-gray-700">
+                By <span className="font-semibold">Author Name</span>
+              </p>
+              <p className="mb-2 text-sm dark:text-black text-gray-600">
+                Published Date:{" "}
+                <span className="font-semibold">January 1, 2022</span>
+              </p>
+              <p className="mb-2 text-sm dark:text-black text-gray-600">
+                Genre: <span className="font-semibold">Fiction</span>
+              </p>
+              <div className="flex items-center mb-2">
+                <p className="mr-2 text-lg font-semibold text-black ">
+                  $20.00
+                </p>
+                <p className="text-base font-medium text-gray-500 line-through dark:text-gray-300">
+                  $25.00
+                </p>
+                <p className="ml-auto text-base font-medium text-green-500">
+                  20% off
+                </p>
+              </div>
+              <button className="bg-blue-950 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                Add to Cart
+              </button>
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
+      </div>
     )
 }

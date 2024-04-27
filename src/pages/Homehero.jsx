@@ -45,7 +45,7 @@ export default function Homehero() {
   return (
     <div>
       <section
-        className="pt-10 mx-2 mt-2 sm:pt-2 bg-cover bg-center h-[30rem] relative transition duration-1000"
+        className="pt-10 mx-2 mt-2 sm:pt-2 bg-cover bg-center h-[30rem] relative transition duration-1000 brightness-70"
         style={{
           backgroundImage: `url(${backgrounds[backgroundIndex]})`,
           backgroundSize: "cover",

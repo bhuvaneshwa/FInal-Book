@@ -66,9 +66,9 @@ function Navbar() {
                     </ul>
                   )}
                 </li>
-                <li>
+                {/* <li>
                   <Link to="/membership" className="text-gray-800 hover:text-blue-600">Membership</Link>
-                </li>
+                </li> */}
                 <li>
                   <Link to="/testimonial" className="text-gray-800 hover:text-blue-600">Reviews</Link>
                 </li>
@@ -98,22 +98,22 @@ function Navbar() {
                 </svg>
               </button>
               {isBookOpen && (
-                <ul className="absolute top-full left-0 w-40 bg-white shadow-md rounded-b-md">
+                <ul className="absolute top-[2.6rem] left-4  w-40 bg-white shadow-md ">
                   <li>
-                    <Link to="/generalview" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">General Books</Link>
+                    <Link to="/generalview" className="block px-4 py-2 text-sm text-gray-800 hover:bg-blue-950 hover:text-white">General Books</Link>
                   </li>
                   <li>
-                    <Link to="/premiumbooks" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Premium Books</Link>
+                    <Link to="/premiumbooks" className="block px-4 py-2 text-sm text-gray-800 hover:bg-blue-950 hover:text-white">Premium Books</Link>
                   </li>
                   <li>
-                    <Link to="/newbookview" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">New Books</Link>
+                    <Link to="/newbookview" className="block px-4 py-2 text-sm text-gray-800 hover:bg-blue-950 hover:text-white">New Books</Link>
                   </li>
                 </ul>
               )}
             </li>
-            <li className="flex">
+            {/* <li className="flex">
               <Link to="/membership" className="flex items-center px-4 -mb-1">Membership</Link>
-            </li>
+            </li> */}
             <li className="flex">
               <Link to="/testimonial" className="flex items-center px-4 -mb-1 cursor-pointer">Reviews</Link>
             </li>
